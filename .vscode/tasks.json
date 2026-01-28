@@ -1,0 +1,45 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "SyncGit",
+			"type": "shell",
+			"command": "git pull --rebase origin main; git push origin main"
+		},
+		{
+			"label": "CheckStatus",
+			"type": "shell",
+			"command": "git status"
+		},
+		{
+			"label": "FinishMergePush",
+			"type": "shell",
+			"command": "git commit -m \"Merge remote changes\"; git push origin main"
+		},
+		{
+			"label": "CheckLog",
+			"type": "shell",
+			"command": "git log -3 --graph --oneline"
+		},
+		{
+			"label": "CheckLock",
+			"type": "shell",
+			"command": "Test-Path .git/index.lock"
+		},
+		{
+			"label": "DiagnoseAndFix",
+			"type": "shell",
+			"command": "git status; git pull --no-edit"
+		},
+		{
+			"label": "CommitMergePush",
+			"type": "shell",
+			"command": "git commit -m \"Merge_remote_changes\"; git push origin main"
+		},
+		{
+			"label": "GitPushUserRequest",
+			"type": "shell",
+			"command": "git push"
+		}
+	]
+}
